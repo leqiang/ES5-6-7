@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<!--
+  function Point(x = 1,y = 2) {
+    this.x = x;
+    this.y = y;
+  }
+-->
+
+<script type="text/javascript">
+  function Point(x = 0,y = 0) {
+      this.x = x,
+      this.y = y    
+  }
+  let p = new Point(5,7)
+  console.log(p.x, p.y)
+
+
+  p = new Point()
+  console.log(p.x, p.y)
+  
+</script>
+</body>
+</html>

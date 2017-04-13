@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>12_class</title>
+</head>
+<body>
+</body>
+<!--
+1. 通过class定义类
+2. 在类中通过constructor定义构造方法
+3. 通过new来创建类的实例
+4. 通过extends来实现类的继承
+5. 通过super调用父类的构造方法
+6. 重写从父类中继承的一般方法
+-->
+<script type="text/javascript">
+  // 定义类
+  class Person {
+    // 定义构造方法
+    constructor (name, age) {
+      this.name = name;
+      this.age = age;
+    }
+
+    // 定义一般方法
+    printInfo () {
+      console.log(this.name + " : " + this.age);
+    }
+  }
+  // 根据类创建实例对象
+  var p = new Person('Jack', 12);
+  p.printInfo();
+
+  // 定义子类
+  class Student extends Person {
+    constructor (name, age, price) {
+      super(name, age); // 调用父类Person的构造方法
+      this.price = price;
+    }
+
+    // 重写: 子类自动拥有父类的方法, 但方法的实现不能满足当前的要求, 就需要重写
+    printInfo () {
+      console.log(this.name + " : " + this.age + " : " + this.price);
+    }
+  }
+
+  let s = new Student('aa', 23, 10000);
+  s.printInfo();
+</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<!--
+1. JSON.stringify(obj/arr)
+  * js对象(数组)转换为json对象(数组)
+2. JSON.parse(json)
+  * json对象(数组)转换为js对象(数组)
+-->
+<script type="text/javascript">
+    var obj = {
+      name: 'TOM',
+      age: 22
+    }
+    
+    var json = JSON.stringify(obj)
+    console.log(json)
+  var obj = JSON.parse(json)
+  console.log(obj)
+  
+  var arr = [
+    {name: 'jack0',age: 33},
+    {name: 'jack1',age: 33},
+    {name: 'jack2',age: 33},
+    {name: 'jack3',age: 33}
+  ]
+  var jsonArr = JSON.stringify(arr)
+  console.log(jsonArr)
+  var arr = JSON.parse(jsonArr)
+  console.log(arr)
+    
+</script>
+</body>
+</html>

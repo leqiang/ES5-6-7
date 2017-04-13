@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>05_Set和Map数据结构</title>
+</head>
+<body>
+<!--
+1. Set容器 : 无序不可重复的多个value的集合体
+  * Set()
+  * Set(array)
+  * add(value)
+  * delete(value)
+  * has(value)
+  * clear()
+  * size
+2. Map容器 : 无序key不重复的多个key-value的集合体
+  * Map()
+  * Map(array)
+  * set(key, value)
+  * get(key)
+  * delete(key)
+  * has(key)
+  * clear()
+  * size
+-->
+
+<script type="text/javascript">
+
+  //set
+  let s = new Set();
+  [3, 2, 5, 3].map(x=> s.add(x));
+  for (i of s) {
+    console.log(i);
+  }
+
+  s.delete(3);
+  console.log(s);
+  console.log(s.has(5));
+  console.log(s.size);
+  s.clear();
+  console.log(s);
+
+  let arr = [1, 3, 5, 1];
+  s = new Set(arr);
+  console.log(s);
+  console.log(arr);
+  arr = Array.from(s);
+  console.log(arr);
+
+  //map
+  let m = new Map();
+  o = { p: 'Hello World' };
+  m.set(o, 'content');
+  console.log(m.get(o));
+
+  m = new Map([['name', '张三'], ['age', 12]]);
+  console.log(m);
+  console.log(m.size);
+  console.log(m.has('name'));
+  console.log(m.get('age'));
+  m.delete('age');
+  console.log(m.get('age'));
+
+  m.set('salary', 10000);
+  for (let key of m.keys()) {
+    console.log('key=' + key);
+  }
+  for (let value of m.values()) {
+    console.log('value=' + value);
+  }
+  for (let item of m) {
+    console.log(item[0] + ':' + item[1]);
+  }
+
+</script>
+</body>
+
+</html>

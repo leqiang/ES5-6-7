@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>06_for_of循环</title>
+</head>
+<body>
+  <button>test</button>
+  <button>test2</button>
+  <button>test3</button>
+<!--
+for...of循环遍历
+  1. 遍历数组
+  2. 遍历Set
+  3. 遍历Map
+  4. 遍历字符串
+  5. 遍历伪数组
+-->
+
+<script type="text/javascript">
+  const arr = [2, 4, 6, 2]
+  for (item of arr) {
+    console.log(item)
+  }
+  console.log('-------')
+  const set = new Set(arr)
+  for (item of set) {
+    console.log(item)
+  }
+  console.log('-------')
+  const map = new Map()
+  map.set('name', 'tom')
+  map.set(12, true)
+  for ([key, value] of map) {
+    console.log(key, value)
+  }
+  console.log('-------')
+  const str = 'atguigu'
+  for (item of str) {
+    console.log(item)
+  }
+  let btns = document.getElementsByTagName('button')
+  for (item of btns) {
+    console.log(item.innerHTML)
+  }
+</script>
+</body>
+
+</html>

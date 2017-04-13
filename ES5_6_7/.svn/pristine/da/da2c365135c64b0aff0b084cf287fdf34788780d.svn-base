@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>08_形参默认值</title>
+</head>
+<body>
+<!--
+  function Point(x = 1,y = 2) {
+    this.x = x;
+    this.y = y;
+  }
+-->
+<script type="text/javascript">
+    //定义一个点的类
+  function Point(x=0, y=0) {
+    this.x = x
+    this.y = y
+  }
+  //创建点对象
+  let p = new Point(2, 3)
+  console.log(p.x, p.y)
+
+  p = new Point() //如果不指定坐标, 创建的就是原点
+  console.log(p.x, p.y)
+</script>
+
+</body>
+</html>

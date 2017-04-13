@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>02_JSON对象</title>
+</head>
+<body>
+<!--
+1. JSON.stringify(obj/arr)
+  * js对象(数组)转换为json对象(数组)
+2. JSON.parse(json)
+  * json对象(数组)转换为js对象(数组)
+-->
+<script type="text/javascript">
+  'use strict'
+
+  var p = {name: 'Tom', age: 12}
+  // js对象--->json对象
+  var json = JSON.stringify(p)
+  console.log(json, typeof json)
+  // json对象--->js对象
+  p = JSON.parse(json)
+  console.log(p, typeof p)
+
+  var ps = [
+    {name: 'Tom', age: 12},
+    {name: 'Tom2', age: 13},
+    {name: 'Tom3', age: 14}
+  ]
+  // js数组--->json数组
+  json = JSON.stringify(ps)
+  console.log(json, typeof json)  //string
+  // json对象--->js对象
+  ps = JSON.parse(json)
+  console.log(ps, typeof ps, ps instanceof Array) //object  true
+</script>
+</body>
+</html>

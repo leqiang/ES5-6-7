@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<!--
+1. 通过class定义类
+2. 在类中通过constructor定义构造方法
+3. 通过new来创建类的实例
+4. 通过extends来实现类的继承
+5. 通过super调用父类的构造方法
+6. 重写从父类中继承的一般方法
+-->
+
+<script type="text/javascript">
+  class Person {
+    //构造方法
+    constructor(name,age){
+      this.name = name
+      this.age = age
+    }
+  //  一般方法
+      showInfo () {
+        console.log(this.name, this.age)
+      }
+
+  }
+
+  let p = new Person('xiaoxiao', 25)
+  p.showInfo()
+
+//  子类继承
+
+  class Student extends Person{
+    constructor(name, age, price){
+      super(name, age)
+      this.price = price
+    }
+//    重写一般方法
+    showInfo () {
+      console.log(this.name, this.age, this.price)
+    }
+  }
+
+  let s = new Student('Dudu', 18, 20000)
+  s.showInfo()
+
+
+
+
+
+
+</script>
+</body>
+</html>

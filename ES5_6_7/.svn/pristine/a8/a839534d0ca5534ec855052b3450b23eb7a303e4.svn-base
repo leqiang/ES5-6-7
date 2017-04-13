@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>01_严格模式</title>
+</head>
+<body>
+<!--
+1. 理解:
+  * 除了正常运行模式(混杂模式)，ES5添加了第二种运行模式："严格模式"（strict mode）。
+  * 顾名思义，这种模式使得Javascript在更严格的语法条件下运行
+2.  目的/作用
+	* 消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为
+	* 消除代码运行的一些不安全之处，保证代码运行的安全
+	* 为未来新版本的Javascript做好铺垫
+3. 使用
+  * 在全局或函数的第一条语句定义为: 'use strict';
+  * 如果浏览器不支持, 只解析为一条简单的语句, 没有任何副作用
+4. 语法和行为改变
+	* 必须用var声明变量
+	* 禁止this指向window
+	* 创建eval作用域
+	* 对象不能有重名的属性
+-->
+
+<script type="text/javascript">
+  'use strict' //整个js都用上了严格模式
+  /*
+  i = 2 // 报错, 必须用var声明变量
+  */
+  /*
+  function fn() {
+    'use strict' // 只有当前函数用上严格模式
+    i = 3 // 报错, 必须用var声明变量
+  }
+  fn()*/
+
+  //* 必须用var声明变量
+  // i = 4
+
+  //* 禁止this指向window
+  /*function Person(age) {
+    this.age = age
+  }
+  Person(12)*/
+
+  //* 创建eval作用域
+  //eval()作用: 动态解析执行代码字符串
+  /*eval('var a = 3')
+   console.log(a)*/
+
+  //* 对象不能有重名的属性
+  /*var obj = {
+    a: 2,
+    a: 3
+  }*/
+
+</script>
+</body>
+</html>

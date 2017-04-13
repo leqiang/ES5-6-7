@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>08_形参默认值</title>
+</head>
+<body>
+<!--
+  function Point(x = 1,y = 2) {
+    this.x = x;
+    this.y = y;
+  }
+-->
+<script type="text/javascript">
+  function Point(x = 1, y = 2) {
+    this.x = x;
+    this.y = y;
+  }
+
+  let p = new Point();
+  console.log(p);
+
+  p = new Point(3, 4);
+  console.log(p);
+
+</script>
+
+</body>
+</html>

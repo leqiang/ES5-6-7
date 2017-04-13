@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<button>测试一</button>
+<button>测试二</button>
+<button>测试三</button>
+<!--
+1. 作用:
+  * 与var类似, 用于声明一个变量
+2. 特点:
+  * 在块作用域内有效
+  * 不能重复声明
+  * 不会预处理, 不存在提升
+3. 应用:
+  * 循环遍历加监听
+  * 使用let取代var是趋势
+-->
+<script type="text/javascript">
+  if(true){
+    
+    console.log(a)
+//    console.log(b)
+    var a = 111
+    let b = 222
+//    let b = 333
+//    console.log(b)
+  }
+
+//  console.log(a)
+
+//  循环遍历加监听
+
+  let btns = document.getElementsByTagName('button')
+
+  for (let i = 0, len = btns.length; i < len; i++) {
+    let btn = btns[i]
+    btn.onclick = function () {
+        alert(i)
+    }
+  }
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>01_字符串扩展</title>
+</head>
+<body>
+<!--
+2. includes(str) : 判断是否包含指定的字符串
+3. startsWith(str) : 判断是否以指定字符串开头
+4. endsWith(str) : 判断是否以指定字符串结尾
+5. repeat(count) : 重复指定次数
+-->
+<script type="text/javascript">
+
+  let s = 'www.atguigu.com'
+  console.log(s.indexOf('at')) //ES5
+
+  console.log(s.contains('guigu'))
+  console.log(s.contains('guigui'))
+
+  console.log(s.startsWith('ww'))
+  console.log(s.startsWith('wc'))
+
+  console.log(s.repeat(2))
+
+</script>
+</body>
+</html>
